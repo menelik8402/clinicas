@@ -12,5 +12,7 @@ router.get('/:doc',consultController.getConsultByDoc);
 router.get('/:status',consultController.getConsultByStatus);
 router.get('/:personid',consultController.getOneConsultByPerson_Id);
 router.post('/',consultController.createConsult);
+router.get('/:generic',consultController.getConsultGeneric);
+router.get('/:betdates',consultController.getConsultBetDates);
 
 module.exports=router;

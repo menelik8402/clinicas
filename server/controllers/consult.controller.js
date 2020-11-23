@@ -22,4 +22,10 @@ consultCtrl.getConsultByDoc=(req, res )=>{};
 //Metodo para insertar una consultanueva
 consultCtrl.createConsult=(req, res )=>{};
 
+//Metodo para consultas genericas 
+consultCtrl.getConsultGeneric=(req, res)=>{};
+
+//Metodo para consultas entre fechas
+consultCtrl.getConsultBetDates=(req,res)=>{};
+
 module.exports=consultCtrl;
