@@ -19,4 +19,7 @@ consultCtrl.getConsultByStatus=(req, res )=>{};
 //Metodo que devuelve todas las consultas que ha realizado un medico
 consultCtrl.getConsultByDoc=(req, res )=>{};
 
+//Metodo para insertar una consultanueva
+consultCtrl.createConsult=(req, res )=>{};
+
 module.exports=consultCtrl;
