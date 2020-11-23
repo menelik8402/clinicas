@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get('/',paciente.getPacientes);
 
-router.post('/',paciente.savePaciente);
+router.post('/',paciente.createPacient);
 
 router.get('/:id',paciente.getPacient);
 
