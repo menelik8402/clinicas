@@ -14,7 +14,7 @@ const PacienteSchema = new Schema({
 
 });
 
-module.exports=mongoose.model('c_pacient',PacienteSchema);
+module.exports=mongoose.model('c_pacients',PacienteSchema);
 
 
 

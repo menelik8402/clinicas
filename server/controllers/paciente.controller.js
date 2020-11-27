@@ -9,10 +9,11 @@ pacienteCtrl.getPacients = async (req , res ) => {
           
 };
 
-pacienteCtrl.createPacient= async (req, res) => {
-    const pasc = new Pacient(req.body);
+pacienteCtrl.createPacient=  async (req, res) => {
+   const pasc = new Pacient(req.body);
     await pasc.save();
-    
+
+     
     res.json({
         'status' : 'Pacient saved'
     });
@@ -27,16 +28,15 @@ pacienteCtrl.getPacient= async (req, res ) => {
 };
 
 pacienteCtrl.updatePacient= async(req,res)=>{
-    const {id} =req.body;
+    const {id} =req.params;
     const updpacient ={    
            
-                name : req.body.body,
+                name : req.body.name,
                 lastName : req.body.lastName,
                 cedula : req.body.cedula,
                 genre : req.body.genre,
                 address :req.body.address,
-                deseases : req.body.deseases,
-                        
+                deseases : req.body.deseases                        
                      	
 
     }
