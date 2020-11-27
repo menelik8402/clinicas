@@ -17,8 +17,10 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes
-app.use('/api/agendar/pacientes',require('./routes/agenda.route'));
+app.use('/api/agendar/pacientes',require('./routes/pacient.route'));
 app.use('/api/agendar/consultas',require('./routes/consult.route'));
+app.use('/api/agendar/medicos',require('./routes/medical.route'));
+app.use('/api/agendar/agend',require('./routes/agenda.route'));
 
 app.listen(app.get('port'),()=>{
       console.log('server on port',app.get('port'))

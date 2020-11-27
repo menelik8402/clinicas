@@ -2,7 +2,7 @@ const Pacient = require ('../models/paciente')
 
 const pacienteCtrl = {};
 
-pacienteCtrl.getPacientes = async (req , res ) => {
+pacienteCtrl.getPacients = async (req , res ) => {
 
    const todosPacientes = await Pacient.find();
     res.json(todosPacientes);
@@ -32,17 +32,12 @@ pacienteCtrl.updatePacient= async(req,res)=>{
            
                 name : req.body.body,
                 lastName : req.body.lastName,
-                person_Id : req.body.person_Id,
+                cedula : req.body.cedula,
                 genre : req.body.genre,
                 address :req.body.address,
-                tel : req.body.tel,
+                deseases : req.body.deseases,
                         
-             work: {  
-                     name_work:req.body.name_work ,
-                     tel_work:req.body.tel_work,
-                 address_work :req.body.address_work
-               }	
-           	
+                     	
 
     }
     await Pacient.findByIdAndUpdate(id,{$set: updpacient},{new : true});

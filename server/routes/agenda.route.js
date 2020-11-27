@@ -2,19 +2,19 @@
 const express = require('express');
 const router = express.Router();
 
- const paciente = require ('../controllers/paciente.controller');
+ const agenda = require ('../controllers/agend.controller');
 
 //Rutas para gestionar los pacientes que a sisten o se comunican con la clinica en el proceso agendar
 
-router.get('/',paciente.getPacientes);
+router.get('/',agenda.getAgends);
 
-router.post('/',paciente.createPacient);
+router.post('/',agenda.createAgend);
 
-router.get('/:id',paciente.getPacient);
+router.get('/:id',agenda.getOneAgend);
 
-router.put('/:id',paciente.updatePacient);
+router.put('/:id',agenda.updateAgend);
 
-router.delete('/:id',paciente.deletePacient);
+router.delete('/:id',agenda.deleteAgend);
 
 
 
