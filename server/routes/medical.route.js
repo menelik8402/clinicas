@@ -12,6 +12,7 @@ router.get('/:id',medicalscontroller.getOneMedical);
 router.put('/:doc',medicalscontroller.updateMedical);
 router.post('/',medicalscontroller.createMedical);
 router.delete('/',medicalscontroller.deleteMedical);
-router.post('/',consultController.createConsult);
 
 
+
+module.exports=router;
