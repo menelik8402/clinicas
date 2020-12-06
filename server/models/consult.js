@@ -15,4 +15,4 @@ const { Schema } = mongoose;
     id_procedure : {type : String, required : true}
 
 });
-module.exports=mongoose.model('m_consult',ConsultSchema);
+module.exports=mongoose.model('m_consults',ConsultSchema);
