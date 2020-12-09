@@ -4,12 +4,12 @@ const { Schema } = mongoose;
 
 const AgendSchema = new Schema({
 
-    date_Agend: {type : String ,required :true},     
+    date_Agend: {type : Date ,required :true},     
     cedula_Pac : {type : String , required :true},
     cedula_Doc : { type : String, required : true},
       
 
 });
 
-module.exports=mongoose.model('c_agend',AgendSchema);
+module.exports=mongoose.model('c_agends',AgendSchema);
 

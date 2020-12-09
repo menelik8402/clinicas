@@ -9,9 +9,9 @@ const medicalscontroller=require('../controllers/medical.controller');
 //generando rutas
 router.get('/',medicalscontroller.getAllMedicals);
 router.get('/:id',medicalscontroller.getOneMedical);
-router.put('/:doc',medicalscontroller.updateMedical);
+router.put('/:id',medicalscontroller.updateMedical);
 router.post('/',medicalscontroller.createMedical);
-router.delete('/',medicalscontroller.deleteMedical);
+router.delete('/:id',medicalscontroller.deleteMedical);
 
 
 

@@ -10,8 +10,8 @@ agendaCtrl.getAgends = async (req , res ) => {
 };
 
 agendaCtrl.createAgend= async (req, res) => {
-    const pasc = new Agend(req.body);
-    await pasc.save();
+    const agend = new Agend(req.body);
+    await agend.save();
     
     res.json({
         'status' : 'Agend saved'
@@ -27,14 +27,12 @@ agendaCtrl.getOneAgend= async (req, res ) => {
 };
 
 agendaCtrl.updateAgend= async(req,res)=>{
-    const {id} =req.body;
+    const {id} =req.params;
     const updagend ={    
            
                 date_agend : req.body.date_Agend,
                 cedula_Pac : req.body.cedula_Pac,
-                cedula_Doc : req.body.cedula_Doc,
-              
-                        
+                cedula_Doc : req.body.cedula_Doc,            
                      	
 
     }

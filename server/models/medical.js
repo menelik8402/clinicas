@@ -9,7 +9,7 @@ const MedicalShema = new Schema({
     cedula : {type : String , required :true},
     speciality : { type : String, required : true},
     yearOfGr : {type : Date ,required : true},
-    tel : {type : String,required :true},
+    telephone : {type : String,required :true},
    
 
 });

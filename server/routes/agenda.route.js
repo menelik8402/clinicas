@@ -4,7 +4,7 @@ const router = express.Router();
 
  const agenda = require ('../controllers/agend.controller');
 
-//Rutas para gestionar los pacientes que a sisten o se comunican con la clinica en el proceso agendar
+//Rutas para gestionar los pacientes que asisten o se comunican con la clinica en el proceso agendar
 
 router.get('/',agenda.getAgends);
 

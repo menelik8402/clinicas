@@ -31,7 +31,20 @@ medicalCtrl.getAllMedicals = async (req , res ) => {
  };
  
  medicalCtrl.updateMedical= async(req,res)=>{
-     
+     const { id } =req.params;
+
+     const updmed={
+        name : req.body.name,
+        lastName : req.body.lastName,
+        cedula : req.body.cedula,
+        speciality : req.body.speciality,
+        yearOfGr : req.body.yearOfGr,
+        telephone : req.body.telephone
+     }
+
+     await Medical.findByIdAndUpdate(id,{$set: updmed},{new : true});
+     res.json('Medical updated');
+
  
  };
  
